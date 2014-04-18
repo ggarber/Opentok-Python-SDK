@@ -23,7 +23,7 @@ import json
 dthandler = lambda obj: obj.isoformat() if isinstance(obj, datetime.datetime)  or isinstance(obj, datetime.date) else None
 
 
-class OpenTokException(BaseException):
+class OpenTokException(Exception):
     """Generic OpenTok Error. All other errors extend this."""
     pass
 
